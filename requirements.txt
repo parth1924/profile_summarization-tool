@@ -46,3 +46,4 @@ PyPDF2==2.12.1
 nltk==3.8.1
 google-generativeai==0.8.3
 protobuf==3.20.3   # Use this version to match both mysql-connector-python and streamlit
+setuptools==67.8.0
