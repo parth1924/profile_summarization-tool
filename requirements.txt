@@ -41,6 +41,6 @@ urllib3==2.2.3
 watchdog==5.0.3
 mysql-connector-python==8.0.33
 python-dotenv==1.0.0
-PyPDF2==3.0.0   # Fix here: ensure compatibility
+PyPDF2==2.12.1 # Fix here: ensure compatibility
 nltk==3.8.1
 google-generativeai==0.1.0   # Ensure this package is correct
