@@ -9,7 +9,7 @@ from mysql.connector import Error
 import re
 
 # Configure the Google Gemini API
-genai.configure(api_key="AIzaSyD3SgvfQSSPcOixTLg3lqx9YWe4rmM75qA")
+genai.configure(api_key=st.secrets["general"]["api_key"])
 
 generation_config = {
     "temperature": 1,
@@ -26,10 +26,10 @@ nltk.download('averaged_perceptron_tagger')
 def create_db_connection():
     try:
         connection = mysql.connector.connect(
-            host='localhost',
-            user='root',
-            password='1999',
-            database='profile_extractor'
+            host=st.secrets["mysql"]["host"],
+            user=st.secrets["mysql"]["user"],
+            password=st.secrets["mysql"]["password"],
+            database=st.secrets["mysql"]["database"]
         )
         return connection
     except Error as e:
